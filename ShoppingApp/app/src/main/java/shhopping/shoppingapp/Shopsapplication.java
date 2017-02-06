@@ -20,9 +20,9 @@ public class Shopsapplication extends Application {
     }
 
     public static Shopsapplication getInstance(){
-        return minstance
+        return minstance;
     }
     public Shopservice getShopService(){
-        
+        return shopservice;
     }
 }
