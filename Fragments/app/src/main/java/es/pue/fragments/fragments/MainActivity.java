@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity implements FragmentButton1.O
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ftrans =  fm.beginTransaction();
         if (extra != null){
-            ftrans.replace(R.id.extra_fragment, new FragmentButton2());
+            ftrans.replace(R.id.extra_fragment, new FragmentButton3());
         }else{
-            ftrans.replace(R.id.main_fragment, new FragmentButton3());
+            ftrans.replace(R.id.main_fragment, new FragmentButton2());
         }
         ftrans.commit();
     }
@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity implements FragmentButton1.O
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ftrans =  fm.beginTransaction();
         if (extra != null){
-            ftrans.replace(R.id.extra_fragment, new FragmentButton1());
+            ftrans.replace(R.id.extra_fragment, new FragmentButton2());
         }else{
-            ftrans.replace(R.id.main_fragment, new FragmentButton2());
+            ftrans.replace(R.id.main_fragment, new FragmentButton1());
         }
         ftrans.commit();
     }
