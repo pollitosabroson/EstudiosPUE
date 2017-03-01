@@ -8,16 +8,10 @@ public class Shop {
     private String mnombre;
     private int mrating;
     private int mservicio;
-
-    public void setMprecio(int mprecio) {
-        this.mprecio = mprecio;
-    }
-
     private int mprecio;
     private String telefono;
     private String web;
     private long _id;
-
     public String getMnombre() {
         return mnombre;
     }
@@ -28,6 +22,10 @@ public class Shop {
 
     public int getMprecio() {
         return mprecio;
+    }
+
+    public void setMprecio(int mprecio) {
+        this.mprecio = mprecio;
     }
 
     public void setWeb(String web) {

@@ -2,7 +2,6 @@ package shhopping.shoppingapp.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringJoiner;
 
 import shhopping.shoppingapp.model.Shop;
 
@@ -13,14 +12,13 @@ import shhopping.shoppingapp.model.Shop;
 public class InMemoryShoService implements Shopservice{
     private List<Shop> shops = new ArrayList<>();
 
-    @Override
-    public List<Shop> getAlltiendas() {
+    public InMemoryShoService() {
         Shop s = new Shop();
         s.set_id(1);
         s.setMnombre("Nombre 1");
         s.setMprecio(10);
         s.setMrating(5);
-        s.setMservicio(7);
+        s.setMservicio(1);
         s.setTelefono("123456789");
         s.setWeb("www.settest.com");
         shops.add(s);
@@ -29,7 +27,7 @@ public class InMemoryShoService implements Shopservice{
         s.setMnombre("Nombre 2");
         s.setMprecio(11);
         s.setMrating(3);
-        s.setMservicio(7);
+        s.setMservicio(1);
         s.setTelefono("123456789");
         s.setWeb("www.settest.com");
         shops.add(s);
@@ -38,7 +36,7 @@ public class InMemoryShoService implements Shopservice{
         s.setMnombre("Nombre 3");
         s.setMprecio(13);
         s.setMrating(5);
-        s.setMservicio(7);
+        s.setMservicio(1);
         s.setTelefono("123456789");
         s.setWeb("www.settest.com");
         shops.add(s);
@@ -47,7 +45,7 @@ public class InMemoryShoService implements Shopservice{
         s.setMnombre("Nombre 4");
         s.setMprecio(2);
         s.setMrating(4);
-        s.setMservicio(7);
+        s.setMservicio(1);
         s.setTelefono("123456789");
         s.setWeb("www.settest.com");
         shops.add(s);
@@ -56,11 +54,15 @@ public class InMemoryShoService implements Shopservice{
         s.setMnombre("Nombre 5");
         s.setMprecio(56);
         s.setMrating(2);
-        s.setMservicio(7);
+        s.setMservicio(1);
         s.setTelefono("123456789");
         s.setWeb("www.settest.com");
         shops.add(s);
-        return
+    }
+
+    @Override
+    public List<Shop> getAlltiendas() {
+        return shops;
     }
 
     @Override
@@ -74,7 +76,7 @@ public class InMemoryShoService implements Shopservice{
     @Override
     public void removeShop(long id) {
         for (Shop s:shops){
-            if (s.get_id() == id) shops.remove(s)
+            if (s.get_id() == id) shops.remove(s);
         }
     }
 
@@ -88,7 +90,7 @@ public class InMemoryShoService implements Shopservice{
         }
     }
 
-    private long lastId = OL;
+    private long lastId = 0L;
     private synchronized long getNextId(){
         return ++lastId;
     }

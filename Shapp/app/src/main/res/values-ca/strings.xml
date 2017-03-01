@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shapp</string>
+    <string name="action_settings">Configuració</string>
+    <string name="detail_edit_button">Editar</string>
+    <string name="detail_web_button">Veure web</string>
+</resources>
